@@ -1,0 +1,23 @@
+version: '3.4'
+services:
+  backend-1:
+    image: miguelcnf/programming-with-go-exercise-lb-backend:latest
+    ports:
+      - 8001:8001
+    tty: true
+    environment:
+      - PORT=8001
+  backend-2:
+    image: miguelcnf/programming-with-go-exercise-lb-backend:latest
+    ports:
+      - 8002:8002
+    tty: true
+    environment:
+      - PORT=8002
+  backend-3:
+    image: miguelcnf/programming-with-go-exercise-lb-backend:latest
+    ports:
+      - 8003:8003
+    tty: true
+    environment:
+      - PORT=8003
