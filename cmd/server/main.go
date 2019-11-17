@@ -3,17 +3,14 @@ package main
 import (
 	"log"
 	"net/http"
-
-	"load-balancer/internal/proxy"
 )
 
 func main() {
-	engine := &proxy.Engine{}
+	// TODO: initialise load-balancer engine
 
 	// The "/" string is a special route that matches all requests
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		// TODO
-		engine.ProxyFor()
+		// TODO: serve request through a backend
 	})
 
 	err := http.ListenAndServe(":8080", nil)
